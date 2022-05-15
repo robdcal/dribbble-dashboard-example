@@ -10,22 +10,151 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/0b3ea53f43.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
 
     <div id="app">
         <header id="sidebar">
-            <p>Header</p>
+            <p>Sidebar</p>
         </header>
         <main id="main">
             <div class="main__header">Header</div>
-            <div class="main__box main__box-1">Box 1</div>
-            <div class="main__box main__box-2">Box 2</div>
-            <div class="main__box main__box-3">Box 3</div>
-            <div class="main__box main__box-4">Box 4</div>
-            <div class="main__box main__box-5">Box 5</div>
-            <div class="main__box main__box-6">Box 6</div>
+            <div class="main__container">
+                <div class="main__box main__box-1">
+                    <div class="main__box__metric">
+                        <h2 class="main__box__metric__title--small main__box__metric__title--orange">Revenue</h2>
+                        <p class="main__box__metric__stat">
+                            <span class="main__box__metric__stat--current">$2,810.00</span>
+                            <span class="main__box__metric__stat--change main__box__metric__stat--green">(+8.26%)</span>
+                        </p>
+                    </div>
+                    <div class="main__box__legend">
+                        <span class="main__box__legend__entry main__box__legend__entry--green">Total Earnings</span>
+                        <span class="main__box__legend__entry main__box__legend__entry--orange">Total Views</span>
+                    </div>
+                    <div class="main__box__chart">
+                        Chart
+                    </div>
+                </div>
+                <div class="main__box main__box--small main__box-2">
+                    <h2 class="main__box--small__title--small">Sales Today</h2>
+                    <p class="main__box--small__stat">$120</p>
+                    <p class="main__box--small__text">*Updated every order success</p>
+                    <i
+                        class="main__box--small__icon main__box--small__icon--white fa-solid fa-basket-shopping fa-2x"></i>
+                </div>
+                <div class="main__box main__box--small main__box-3">
+                    <h2 class="main__box--small__title--small">Total Earnings</h2>
+                    <p class="main__box--small__stat">$81,020</p>
+                    <p class="main__box--small__text"><span
+                            class="main__box__metric__stat--change main__box__metric__stat--green">+8.26%</span> Higher
+                        earnings than usual</p>
+                    <i class="main__box--small__icon main__box--small__icon--green fa-solid fa-sack-dollar fa-2x"></i>
+                </div>
+                <div class="main__box main__box--small main__box-4">
+                    <h2 class="main__box--small__title--small">Total Orders</h2>
+                    <p class="main__box--small__stat">102</p>
+                    <p class="main__box--small__text"><span
+                            class="main__box__metric__stat--change main__box__metric__stat--green">+2.18%</span> More
+                        orders than usual</p>
+                    <i class="main__box--small__icon main__box--small__icon--black fa-solid fa-receipt fa-2x"></i>
+                </div>
+                <div class="main__box main__box--small main__box-5">
+                    <h2 class="main__box--small__title--small">Visitors Today</h2>
+                    <p class="main__box--small__stat">81,020</p>
+                    <p class="main__box--small__text"><span
+                            class="main__box__metric__stat--change main__box__metric__stat--green">+3.06%</span> More
+                        visitors than usual</p>
+                    <i class="main__box--small__icon main__box--small__icon--orange fa-solid fa-users fa-2x"></i>
+                </div>
+                <div class="main__box main__box--large main__box-6">
+                    <h2 class="main__box--large__title">Products</h2>
+                    <div class="main__box--large__table-options">
+                        <select class="main__box--large__table-options__filter" name="" id="">
+                            <option value="sold">Most Sold</option>
+                        </select>
+                        <a class="main__box--large__table-options__button" href="#">Add Product</a>
+                    </div>
+                    <table class="main__box--large__table">
+                        <thead>
+                            <tr>
+                                <th>No</th>
+                                <th>Image</th>
+                                <th>Product Name</th>
+                                <th>Price</th>
+                                <th>Status</th>
+                                <th>Sold</th>
+                                <th>Views</th>
+                                <th>Earnings</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td><span><img src="./img/t-shirt_1.png" alt="" /></span></td>
+                                <td>T-SHIRT OWN THE RUN</td>
+                                <td>$46.52</td>
+                                <td><span
+                                        class="main__box--large__table__status main__box--large__table__status--available">Available</span>
+                                </td>
+                                <td>128</td>
+                                <td>12,308</td>
+                                <td>$5,954</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td><span><img src="./img/t-shirt_2.png" alt="" /></span></td>
+                                <td>T-SHIRT OWN THE RUN</td>
+                                <td>$46.52</td>
+                                <td><span
+                                        class="main__box--large__table__status main__box--large__table__status--outofstock">Out
+                                        of stock</span></td>
+                                <td>128</td>
+                                <td>12,308</td>
+                                <td>$5,954</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td><span><img src="./img/t-shirt_3.png" alt="" /></span></td>
+                                <td>T-SHIRT OWN THE RUN</td>
+                                <td>$46.52</td>
+                                <td><span
+                                        class="main__box--large__table__status main__box--large__table__status--outofstock">Out
+                                        of stock</span></td>
+                                <td>128</td>
+                                <td>12,308</td>
+                                <td>$5,954</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td><span><img src="./img/t-shirt_4.png" alt="" /></span></td>
+                                <td>T-SHIRT OWN THE RUN</td>
+                                <td>$46.52</td>
+                                <td><span
+                                        class="main__box--large__table__status main__box--large__table__status--available">Available</span>
+                                </td>
+                                <td>128</td>
+                                <td>12,308</td>
+                                <td>$5,954</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td><span><img src="./img/t-shirt_5.png" alt="" /></span></td>
+                                <td>T-SHIRT OWN THE RUN</td>
+                                <td>$46.52</td>
+                                <td><span
+                                        class="main__box--large__table__status main__box--large__table__status--outofstock">Out
+                                        of stock</span></td>
+                                <td>128</td>
+                                <td>12,308</td>
+                                <td>$5,954</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
         </main>
     </div>
 

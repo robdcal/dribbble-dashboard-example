@@ -4,10 +4,13 @@ This one: https://dribbble.com/shots/17941528-Backing-Dashboard-Web-Design
 
 ## Todo
 
-- Table / main area height
-- JS - chart
-- JS - adding new product
-- Header
+- ~~Table / main area height~~
+- ~~Header~~
 - Sidebar
 - Make icon sizes consistent in small boxes
-- Responsive?
+- JS - chart
+- JS - datepicker
+- JS - header dropdown
+- JS - adding new product
+- Responsive
+- Accessibility

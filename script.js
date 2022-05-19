@@ -1,3 +1,4 @@
+Chart.defaults.font.family = "'Inter', sans-serif"
 const ctx = document.getElementById('main__box__chart__area').getContext('2d');
 const myChart = new Chart(ctx, {
     type: 'line',
@@ -38,11 +39,6 @@ const myChart = new Chart(ctx, {
         plugins: {
             legend: {
                 display: false,
-                labels: {
-                    font: {
-                        family: "'Inter', sans-serif"
-                    }
-                }
             },
             tooltip: {
                 enabled: false
@@ -52,7 +48,3 @@ const myChart = new Chart(ctx, {
         maintainAspectRatio: false,
     }
 });
-
-document.fonts.onloadingdone = () => {
-    myChart.update();
-};

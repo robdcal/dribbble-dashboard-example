@@ -7,14 +7,14 @@ This one: https://dribbble.com/shots/17941528-Backing-Dashboard-Web-Design
 - ~~Table / main area height~~
 - ~~Header~~
 - ~~Sidebar basics~~
-- JS - chart
+- ~~JS - chart~~
 - Sidebar dropdown
 - Make icon sizes consistent in small boxes (main area)
-- JS - datepicker
 - JS - header dropdown
-- JS - adding new product
 - JS - sidebar menu minimise
 - JS - sidebar menu expand / collapse tree
 - Responsive
+- JS - datepicker
+- JS - adding new product
 - Accessibility
 - build workflow (SASS, minify, browser compat, etc)

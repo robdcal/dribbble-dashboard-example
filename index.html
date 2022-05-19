@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Dribbble design to HTML & CSS code | Rob Callaghan</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,7 +17,23 @@
 
     <div id="app">
         <header id="sidebar">
-            <p>Sidebar</p>
+            <span class="sidebar__size-toggle">&#8249;</span>
+            <div class="sidebar__title">
+                <i class="fa-solid fa-crown sidebar__title__icon"></i>
+                <span class="sidebar__title__text">Backing</span>
+            </div>
+            <hr />
+            <ul class="sidebar__menu--upper">
+                <li><i class="fa-solid fa-store"></i> Home</li>
+                <li><i class="fa-solid fa-cart-shopping"></i> Sales</li>
+                <li class="active"><i class="fa-solid fa-basket-shopping"></i> Products</li>
+                <li><i class="fa-solid fa-chart-line"></i> Reports</li>
+                <li><i class="fa-solid fa-users"></i> Customers</li>
+            </ul>
+            <ul class="sidebar__menu--lower">
+                <li><i class="fa-solid fa-gear"></i> Settings</li>
+                <li><i class="fa-solid fa-arrow-right-from-bracket"></i> Log Out</li>
+            </ul>
         </header>
         <main id="main">
             <div class="main__header">
@@ -61,7 +77,7 @@
                         <span class="main__box__legend__entry main__box__legend__entry--orange">Total Views</span>
                     </div>
                     <div class="main__box__chart">
-                        Chart
+                        <canvas id="main__box__chart__area"></canvas>
                     </div>
                 </div>
                 <div class="main__box main__box--small main__box-2">
@@ -189,6 +205,11 @@
             </div>
         </main>
     </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"
+        integrity="sha512-QSkVNOCYLtj73J4hbmVoOV6KVZuMluZlioC+trLpewV8qMjsWqlIQvkn1KGX2StWvPMdWGBqim1xlC8krl1EKQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./script.js"></script>
 
 </body>
 

@@ -2,67 +2,57 @@ const ctx = document.getElementById('main__box__chart__area').getContext('2d');
 const myChart = new Chart(ctx, {
     type: 'line',
     data: {
-        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+        labels: ['4 Mon', '5 Tue', '6 Wed', '3 Sun', '7 Thu', '8 Fri', '9 Sat'],
         datasets: [{
-            label: '# of Votes',
-            data: [12, 19, 3, 5, 2, 3],
-            backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-                'rgba(153, 102, 255, 0.2)',
-                'rgba(255, 159, 64, 0.2)'
-            ],
-            borderColor: [
-                'rgba(255, 99, 132, 1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)',
-                'rgba(153, 102, 255, 1)',
-                'rgba(255, 159, 64, 1)'
-            ],
+            data: [2250, 1950, 5100, 3400, 5000, 3600, 4500],
             borderWidth: 1,
             fill: false,
-            tension: 0.1,
-            borderColor: 'rgb(75, 192, 192)',
+            borderColor: '#8ac389',
+            backgroundColor: '#8ac389',
         }, {
-            label: '# of Votes',
-            data: [2, 9, 3, 8, 5, 12],
-            backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-                'rgba(153, 102, 255, 0.2)',
-                'rgba(255, 159, 64, 0.2)'
-            ],
-            borderColor: [
-                'rgba(255, 99, 132, 1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)',
-                'rgba(153, 102, 255, 1)',
-                'rgba(255, 159, 64, 1)'
-            ],
+            data: [1300, 3600, 3000, 5600, 2700, 2500, 1700],
             borderWidth: 1,
             fill: false,
-            tension: 0.1,
-            borderColor: 'rgb(75, 192, 192)',
+            borderColor: '#fe5e37',
+            backgroundColor: '#fe5e37',
         }]
     },
     options: {
         scales: {
             y: {
-                beginAtZero: true
+                beginAtZero: true,
+                ticks: {
+                    callback: function (value, index, ticks) {
+                        return value / 1000 + "K";
+                    },
+                    autoSkip: true,
+                    maxTicksLimit: 4
+                }
+            },
+            x: {
+                grid: {
+                    display: false
+                }
             }
         },
         plugins: {
             legend: {
-                display: false
+                display: false,
+                labels: {
+                    font: {
+                        family: "'Inter', sans-serif"
+                    }
+                }
+            },
+            tooltip: {
+                enabled: false
             }
         },
         responsive: true,
         maintainAspectRatio: false,
     }
 });
+
+document.fonts.onloadingdone = () => {
+    myChart.update();
+};
